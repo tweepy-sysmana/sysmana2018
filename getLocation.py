@@ -21,4 +21,4 @@ if __name__ == '__main__':
     #Connect to the stream
     myStreamListener = MyStreamListener()
     myStream = tweepy.Stream(auth=api.auth, listener=myStreamListener)
-    myStream.filter(track=['probandoSysmana'])
+    myStream.filter(track=['sysmana2018'])
