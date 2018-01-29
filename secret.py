@@ -36,7 +36,7 @@ credentials ={
 		'access_token_secret' : ''
 	}
 }
-
+#recibe por parametro uno de los usuarios de los que hayamos almacenado sus credenciales
 def init_twitter(u):
 	auth = tweepy.OAuthHandler(credentials[u]['consumer_key'], credentials[u]['consumer_secret'])
 	auth.set_access_token(credentials[u]['access_token'], credentials[u]['access_token_secret'])

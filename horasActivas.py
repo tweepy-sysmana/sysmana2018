@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
+### Devuelve una estimacion en base a 200 tweets de las horas a las que suele conectarse un usuario
 import tweepy, codecs, sys
 from secret import *
 

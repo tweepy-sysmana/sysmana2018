@@ -1,6 +1,8 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
 
+# recoge de un fichero los tweets para irlos retwiteando cada vez que ejecutemos el script
+# >> retuitewa.py -f fichero.txt
 import sys
 if 'idlelib.rpc' in sys.modules:
     sys.argv.extend(raw_input("Args: ").split())
@@ -9,7 +11,7 @@ from secret import *
 
 # Se comprueba que reciba por parámetro un fichero donde leer los tweets
 if len(sys.argv)<2:
-    print   "Usage:",sys.argv[0],"file\n\n",
+    print   "Usage:",sys.argv[0],"-f file\n\n",
     sys.exit(1)
 
 # Recogemos el fichero

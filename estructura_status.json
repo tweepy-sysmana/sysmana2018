@@ -1,13 +1,13 @@
 /* json.dumps(StatusObject._json) */
 {
-    "created_at": "Thu Jul 28 00:08:39 +0000 2016",
+    "created_at": "",
     "in_reply_to_status_id": null,
-    "id_str": "758454081656467456",
+    "id_str": "",
     "retweeted": false,
     "entities": {
         "hashtags": [
             {
-                "text": "30secLL_bot",
+                "text": "",
                 "indices": []
             }
         ],
@@ -15,25 +15,25 @@
         "symbols": [],
         "media": [
             {
-                "url": "https://t.co/oQjf1qKsDC",
-                "id_str": "680158074653442048",
-                "source_status_id": 680158389477875700,
-                "source_user_id": 4017736032,
-                "source_user_id_str": "4017736032",
-                "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/680158074653442048/pu/img/UkJ-B_AqbC_vEOcY.jpg",
-                "source_status_id_str": "680158389477875712",
+                "url": "https://t.co/",
+                "id_str": "",
+                "source_status_id": ,
+                "source_user_id": ,
+                "source_user_id_str": "",
+                "media_url_https": "",
+                "source_status_id_str": "",
                 "sizes": {
                     "medium": { },
                     "small": { },
                     "thumb": { },
                     "large": { }
                 },
-                "display_url": "pic.twitter.com/oQjf1qKsDC",
+                "display_url": "pic.twitter.com/",
                 "type": "photo",
-                "id": 680158074653442000,
+                "id": ,
                 "indices": [],
-                "expanded_url": "http://twitter.com/30seclovelive/status/680158389477875712/video/1",
-                "media_url": "http://pbs.twimg.com/ext_tw_video_thumb/680158074653442048/pu/img/UkJ-B_AqbC_vEOcY.jpg"
+                "expanded_url": "http://twitter.com/",
+                "media_url": "http://pbs.twimg.com/"
             }
         ],
         "user_mentions": []
@@ -46,16 +46,16 @@
     "favorite_count": 228,
     "favorited": false,
     "in_reply_to_status_id_str": null,
-    "source": "<a href=\"http://twittbot.net/\" rel=\"nofollow\">twittbot.net</a>",
+    "source": "",
     "in_reply_to_user_id": null,
     "user": {
         "default_profile": false,
-        "id_str": "4017736032",
+        "id_str": "",
         "profile_background_tile": false,
         "following": false,
-        "description": "30+ sec video bot / 30+ 秒 ビデオ bot | Love Live! • Love Live! Sunshine!!",
-        "name": "30+ sec of ラブライブ!",
-        "profile_sidebar_border_color": "000000",
+        "description": "!!",
+        "name": "!",
+        "profile_sidebar_border_color": "",
         "entities": {
             "description": {
                 "urls": []
@@ -65,10 +65,10 @@
         "statuses_count": 2821,
         "notifications": false,
         "verified": false,
-        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
-        "profile_image_url": "http://pbs.twimg.com/profile_images/751165343968555009/DGbWpedO_normal.jpg",
+        "profile_background_image_url_https": "https://abs.twimg.com/",
+        "profile_image_url": "http://pbs.twimg.com/profile_images",
         "default_profile_image": false,
-        "profile_image_url_https": "https://pbs.twimg.com/profile_images/751165343968555009/DGbWpedO_normal.jpg",
+        "profile_image_url_https": "https://pbs.twimg.com/profile_images/",
         "geo_enabled": false,
         "follow_request_sent": false,
         "is_translation_enabled": false,
@@ -77,21 +77,21 @@
         "favourites_count": 0,
         "url": null,
         "followers_count": 31794,
-        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+        "profile_background_image_url": "",
         "profile_link_color": "E81C4F",
         "profile_text_color": "000000",
-        "profile_banner_url": "https://pbs.twimg.com/profile_banners/4017736032/1464317692",
+        "profile_banner_url": "https://pbs.twimg.com/profile_banners//",
         "has_extended_profile": false,
         "is_translator": false,
         "profile_sidebar_fill_color": "000000",
         "created_at": "Sun Oct 25 22:20:47 +0000 2015",
         "contributors_enabled": false,
-        "friends_count": 6,
-        "id": 4017736032,
+        "friends_count": ,
+        "id": ,
         "profile_background_color": "000000",
-        "location": "音ノ木坂学院 / 浦の星女学院 ",
+        "location": " /  ",
         "time_zone": null,
-        "screen_name": "30seclovelive",
+        "screen_name": "",
         "listed_count": 228,
         "lang": "en"
     },
@@ -100,37 +100,37 @@
     "truncated": false,
     "in_reply_to_screen_name": null,
     "is_quote_status": false,
-    "id": 758454081656467500,
-    "text": "movie - hanayo vs. bread #30secLL_bot https://t.co/oQjf1qKsDC",
+    "id": ,
+    "text": "",
     "extended_entities": {
         "media": [
             {
-                "url": "https://t.co/oQjf1qKsDC",
-                "id_str": "680158074653442048",
-                "source_status_id": 680158389477875700,
-                "source_user_id": 4017736032,
-                "source_user_id_str": "4017736032",
-                "media_url_https": "https://pbs.twimg.com/ext_tw_video_thumb/680158074653442048/pu/img/UkJ-B_AqbC_vEOcY.jpg",
-                "source_status_id_str": "680158389477875712",
+                "url": "https://t.co/",
+                "id_str": "",
+                "source_status_id": ,
+                "source_user_id": ,
+                "source_user_id_str": "",
+                "media_url_https": "https://pbs.twimg.com///pu/img/UkJ-.jpg",
+                "source_status_id_str": "",
                 "sizes": {
                     "medium": { },
                     "small": { },
                     "thumb": { },
                     "large": { }
                 },
-                "display_url": "pic.twitter.com/oQjf1qKsDC",
+                "display_url": "pic.twitter.com/",
                 "type": "video",
-                "id": 680158074653442000,
+                "id": ,
                 "indices": [],
                 "additional_media_info": {
                     "monetizable": false,
                     "source_user": {
                         "default_profile": false,
-                        "id_str": "4017736032",
+                        "id_str": "",
                         "profile_background_tile": false,
                         "following": false,
-                        "description": "30+ sec video bot / 30+ 秒 ビデオ bot | Love Live! • Love Live! Sunshine!!",
-                        "name": "30+ sec of ラブライブ!",
+                        "description": "!",
+                        "name": "!",
                         "profile_sidebar_border_color": "000000",
                         "entities": {
                             "description": {
@@ -141,10 +141,10 @@
                         "statuses_count": 2821,
                         "notifications": false,
                         "verified": false,
-                        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/theme1/bg.png",
-                        "profile_image_url": "http://pbs.twimg.com/profile_images/751165343968555009/DGbWpedO_normal.jpg",
+                        "profile_background_image_url_https": "https://abs.twimg.com/images/themes/bg.png",
+                        "profile_image_url": "http://pbs.twimg.com/.jpg",
                         "default_profile_image": false,
-                        "profile_image_url_https": "https://pbs.twimg.com/profile_images/751165343968555009/DGbWpedO_normal.jpg",
+                        "profile_image_url_https": "https://pbs.twimg.com/.jpg",
                         "geo_enabled": false,
                         "follow_request_sent": false,
                         "is_translation_enabled": false,
@@ -153,21 +153,21 @@
                         "favourites_count": 0,
                         "url": null,
                         "followers_count": 31794,
-                        "profile_background_image_url": "http://abs.twimg.com/images/themes/theme1/bg.png",
+                        "profile_background_image_url": "http://abs.twimg.com///bg.png",
                         "profile_link_color": "E81C4F",
                         "profile_text_color": "000000",
-                        "profile_banner_url": "https://pbs.twimg.com/profile_banners/4017736032/1464317692",
+                        "profile_banner_url": "https://pbs.twimg.com/profile_banners//",
                         "has_extended_profile": false,
                         "is_translator": false,
                         "profile_sidebar_fill_color": "000000",
                         "created_at": "Sun Oct 25 22:20:47 +0000 2015",
                         "contributors_enabled": false,
                         "friends_count": 6,
-                        "id": 4017736032,
+                        "id": ,
                         "profile_background_color": "000000",
-                        "location": "音ノ木坂学院 / 浦の星女学院 ",
+                        "location": " /  ",
                         "time_zone": null,
-                        "screen_name": "30seclovelive",
+                        "screen_name": "",
                         "listed_count": 228,
                         "lang": "en"
                     }
@@ -176,23 +176,23 @@
                     "duration_millis": 30000,
                     "variants": [
                         {
-                            "url": "https://video.twimg.com/ext_tw_video/680158074653442048/pu/pl/yOBp87ckwBL35I8e.m3u8",
+                            "url": "https://video.twimg.com/ext_tw_video/.m3u8",
                             "content_type": "application/x-mpegURL"
                         },
                         {
-                            "url": "https://video.twimg.com/ext_tw_video/680158074653442048/pu/pl/yOBp87ckwBL35I8e.mpd",
+                            "url": "https://video.twimg.com/ext_tw_video/.mpd",
                             "content_type": "application/dash+xml"
                         },
                         {
-                            "url": "https://video.twimg.com/ext_tw_video/680158074653442048/pu/vid/1280x720/cZN0XuT_6u12nwak.mp4",
+                            "url": "https://video.twimg.com/ext_tw_video/0/.mp4",
                             "content_type": "video/mp4",
                         },
                         {
-                            "url": "https://video.twimg.com/ext_tw_video/680158074653442048/pu/vid/640x360/-6cs96ywIwtM7-JP.mp4",
+                            "url": "https://video.twimg.com/ext_tw_video//--JP.mp4",
                             "content_type": "video/mp4",
                         },
                         {
-                            "url": "https://video.twimg.com/ext_tw_video/680158074653442048/pu/vid/320x180/Spqi13GJkXZpU_zv.mp4",
+                            "url": "https://video.twimg.com/ext_tw_video//.mp4",
                             "content_type": "video/mp4",
                         }
                     ],
@@ -201,8 +201,8 @@
                         9
                     ]
                 },
-                "expanded_url": "http://twitter.com/30seclovelive/status/680158389477875712/video/1",
-                "media_url": "http://pbs.twimg.com/ext_tw_video_thumb/680158074653442048/pu/img/UkJ-B_AqbC_vEOcY.jpg"
+                "expanded_url": "http://twitter.com",
+                "media_url": "http://pbs.twimg.com/ext_tw_video_thumb/qbC_vEOcY.jpg"
             }
         ]
     },

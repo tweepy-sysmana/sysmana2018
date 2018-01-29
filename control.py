@@ -1,5 +1,7 @@
 #!/usr/bin/env python
 # -*- coding: utf-8 -*-
+
+# devuelve un analisis de las relaciones de un usuario en base a un historico previo (seguidores, amigos, seguidores inactivos, antiguos seguidores...)
 import sys, tweepy, shelve, datetime, traceback
 import itertools # Librería de Python con métodos que devuelven iterables eficientes.
 from secret import *
@@ -11,9 +13,10 @@ lostFollowers = {}
 newFollowers = {}
 followerIds = []
 inactivos = []
+#fichero donde guardamos el historico
 followersFile = 'followers_control.twt'
 user = sys.argv[1]
-inactivityTime = 90 #days
+inactivityTime = 90 #dias que establecemos para inactividad de un usuario
 today = datetime.datetime.now()
 
 
