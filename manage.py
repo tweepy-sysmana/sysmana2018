@@ -3,12 +3,16 @@ import os
 import click
 import tweepy
 
-from secret import *
 from .getLocation import MyStreamListener
 from .horasActivas import horas
 from .favorite import MyStreamListener as FavoriteListener
 from .retuitea import retweet
 from .streamSearch import MyStreamListener as StreamStreamListener
+from .twitter_client import TwitterAuthApi
+
+
+# TODO
+client = TwitterAuthApi(credentials)
 
 
 @click.group()
@@ -18,21 +22,21 @@ def cli():
 
 @click.command()
 def control():
-    # TODO
-    pass
+    get_followers(client.get_user_api(user))
 
 
 @click.command()
 def favourite():
-    api = init_twitter('sysmanapy')
+    api = client.get_user_api('sysmanapy')
     myStreamListener = FavoriteListener()
-    myStream = tweepy.Stream(auth=api.auth, listener=myStreamListener)
+    myStream = tweepy.Stream(
+        auth=api.auth, listener=myStreamListener)
     myStream.filter(track=['sysmana2018'])
 
 
 @click.command()
 def location():
-    api = init_twitter('sysmanapy')
+    api = client.get_user_api('sysmanapy')
     myStreamListener = MyStreamListener()
     myStream = tweepy.Stream(auth=api.auth, listener=myStreamListener)
     myStream.filter(track=['sysmana2018'])
