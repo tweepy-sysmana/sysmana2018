@@ -7,11 +7,6 @@ from secret import *
 
 api = init_twitter('sysmanapy');
 
-if len(sys.argv) != 2:
-   sys.exit('Usage: '+sys.argv[0]+' twitter_user')
-else:
-	user = sys.argv[1]
-
 manana = tarde = noche = 0
 
 

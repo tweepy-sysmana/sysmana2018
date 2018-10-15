@@ -18,7 +18,7 @@ class MyStreamListener(tweepy.StreamListener): #### PASO 2
 
 		api.create_favorite(status.id); # Damos like y retweet
 		api.update_status("Genial! soy el script de @nievesborrero y @PabloLeonPsi, encantado "+ autor , in_reply_to_status_id=status.id);
-		
+
 		print("-"*10)
 
 		# Almacenamos en un documento
@@ -30,6 +30,3 @@ class MyStreamListener(tweepy.StreamListener): #### PASO 2
 
 if __name__ == '__main__':
 
-	myStreamListener = MyStreamListener() #### PASO 3
-	myStream = tweepy.Stream(auth=api.auth, listener=myStreamListener) #### PASO 4
-	myStream.filter(track=['sysmana2018']) #### PASO 5

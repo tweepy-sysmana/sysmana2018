@@ -7,17 +7,10 @@ api = init_twitter('sysmanapy')
 
 class MyStreamListener(tweepy.StreamListener):
 
-	def on_status(self, status):			
+	def on_status(self, status):
 	    print('Autor: '+status.user.screen_name)
 	    print('Estado: \n'+status.text)
 	    print("-"*10)
 
 	    api.create_favorite(status.id);
 	    api.update_status("Genial! soy el script de @nievesborrero y @PabloLeonPsi, encantado @",in_reply_to_status_id=status.id);
-
-if __name__ == '__main__':
-
-    #Connect to the stream
-    myStreamListener = MyStreamListener()
-    myStream = tweepy.Stream(auth=api.auth, listener=myStreamListener)
-    myStream.filter(track=['sysmana2018'])
