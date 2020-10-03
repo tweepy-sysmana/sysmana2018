@@ -10,7 +10,7 @@ api = init_twitter('sysmanapy')
 
 class MyStreamListener(tweepy.StreamListener):
 
-	def on_status(self, status):		#recogemos todos los tweets que contengan el filtro indicado	
+	def on_status(self, status):		#recogemos todos los tweets que contengan el filtro indicado
 		print('Autor: '+status.user.screen_name)
 		print('Estado: \n'+status.text)
 		if status.coordinates:  #si puede extraer las coordenadas, las muestra
