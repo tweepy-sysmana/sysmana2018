@@ -29,12 +29,12 @@ def showSysError(reason):
 
 def paginacion(iterable, pageSize):
     while True:
-      i1, i2 = itertools.tee(iterable)
-      iterable, page = (itertools.islice(i1, pageSize, None),
-         list(itertools.islice(i2, pageSize)))
-      if len(page) == 0:
-         break
-      yield page #devolvemos ese iterable
+        i1, i2 = itertools.tee(iterable)
+        iterable, page = (itertools.islice(i1, pageSize, None),
+            list(itertools.islice(i2, pageSize)))
+        if len(page) == 0:
+            break
+        yield page #devolvemos ese iterable
 
 if len(sys.argv) != 2:
    sys.exit('Usage: '+sys.argv[0]+' twitter_user')
@@ -117,27 +117,34 @@ try:
 
    # Información de cada amigo
    for friendsPage in paginacion(friendsIds, 100):
-	   friendsObjects = api.lookup_users(user_ids=friendsPage)
-	   for friend in friendsObjects:
+	   friends = api.lookup_users(user_ids=friendsPage)
+
+	   for friend in friends:
 			inactivity = None
 			inactivityDate = None
+
 			if not friend.protected:
+            status_created_at = friend.status.created_at
 				try:
-					inactivity = today - friend.status.created_at
-					inactivityDate = str(friend.status.created_at)
+					inactivity = today - status_created_at
+					inactivityDate = str(status_created_at)
 				except:
 					timeLine = friend.timeline()
-					if timeLine != []:
-						inactivity =  today - timeLine[0].created_at
-						inactivityDate =  str(timeLine[0].created_at)
-					else:
+					if timeLine:
 						inactivity =  today - friend.created_at
 						inactivityDate = str(friend.created_at)
-				if inactivity != None and inactivity.days > inactivityTime:
+					else:
+						inactivity =  today - timeLine[0].created_at
+						inactivityDate =  str(timeLine[0].created_at)
+
+				if !inactivity and inactivity.days > inactivityTime:
 					inactivos.append([friend.name,friend.screen_name,inactivityDate])
 
 except tweepy.error.TweepError, e:
-   showSysError(e.reason)
+   if e.reason.find('Rate limit exceeded') != -1:
+      sys.exit('Error: Límite excedido')
+   else:
+      sys.exit('Error: '+str(e.reason))
 
 # Informacion del usuario
 print '###############################################'
