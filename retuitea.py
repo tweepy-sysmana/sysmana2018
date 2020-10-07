@@ -27,13 +27,13 @@ yo = api.me()
 input_file=open(ftuits,'r')
 file_lines=input_file.readlines()
 # Extraemos el primer tweet de la lista
-n=0                             
+n=0
 while n<len(file_lines):
-    l=file_lines[n].split('/')
+    url_block=file_lines[n].split('/')
     # comprobamos que se corresponda con un tweet
-    if l[0][:4]=="http" and l[2]=="twitter.com" and l[4]=="status":
-        tuit=l[5].strip('\n')
-        break   
+    if url_block[0][:4]=="http" and url_block[2]=="twitter.com" and url_block[4]=="status":
+        tuit=url_block[5].strip('\n')
+        break
     n+=1
 
 file_lines=file_lines[n+1:]     # Sobreescribimos el fichero extrayendo el tweet

@@ -19,6 +19,13 @@ user = sys.argv[1]
 inactivityTime = 90 #dias que establecemos para inactividad de un usuario
 today = datetime.datetime.now()
 
+def showSysError(reason):
+   if reason == 'Not found':
+      sys.exit('Error: Usuario no encontrado!!')
+   elif reason.find('Rate limit exceeded'):
+      sys.exit('Error: Limite excedido')
+   else:
+      sys.exit('Error: '+str(reason))
 
 def paginacion(iterable, pageSize):
     while True:
@@ -38,12 +45,7 @@ try:
    userInfo = api.get_user(user)
 except tweepy.error.TweepError, e:
    traceback.print_exc()
-   if e.reason == 'Not found':
-      sys.exit('Error: Usuario no encontrado!!')
-   elif e.reason.find('Rate limit exceeded'):
-      sys.exit('Error: Limite excedido')
-   else:
-      sys.exit('Error: '+str(e.reason))
+   showSysError(e.reason)
 
 usuario = userInfo.name
 idioma = userInfo.lang
