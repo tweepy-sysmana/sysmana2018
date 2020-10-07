@@ -19,15 +19,22 @@ user = sys.argv[1]
 inactivityTime = 90 #dias que establecemos para inactividad de un usuario
 today = datetime.datetime.now()
 
+def showSysError(reason):
+   if reason == 'Not found':
+      sys.exit('Error: Usuario no encontrado!!')
+   elif reason.find('Rate limit exceeded'):
+      sys.exit('Error: Limite excedido')
+   else:
+      sys.exit('Error: '+str(reason))
 
 def paginacion(iterable, pageSize):
     while True:
-        i1, i2 = itertools.tee(iterable)
-        iterable, page = (itertools.islice(i1, pageSize, None), 
-            list(itertools.islice(i2, pageSize)))
-        if len(page) == 0:
-            break
-        yield page #devolvemos ese iterable
+      i1, i2 = itertools.tee(iterable)
+      iterable, page = (itertools.islice(i1, pageSize, None),
+         list(itertools.islice(i2, pageSize)))
+      if len(page) == 0:
+         break
+      yield page #devolvemos ese iterable
 
 if len(sys.argv) != 2:
    sys.exit('Usage: '+sys.argv[0]+' twitter_user')
@@ -38,13 +45,8 @@ try:
    userInfo = api.get_user(user)
 except tweepy.error.TweepError, e:
    traceback.print_exc()
-   if e.reason == 'Not found':
-      sys.exit('Error: Usuario no encontrado!!')
-   elif e.reason.find('Rate limit exceeded'):
-      sys.exit('Error: Limite excedido')
-   else:
-      sys.exit('Error: '+str(e.reason))
-   
+   showSysError(e.reason)
+
 usuario = userInfo.name
 idioma = userInfo.lang
 ubicacion = userInfo.location
@@ -95,7 +97,7 @@ try:
             newFollowers[followerId] = []
    else:
       print 'No hay fichero histórico previo, va a generarse uno nuevo..\n'
-      
+
    # Información de los nuevos followers
    newFollowersIds = newFollowers.keys()
    for newFollowersPage in paginacion(newFollowersIds, 100):
@@ -106,13 +108,13 @@ try:
    followers.update(newFollowers)
    oldFollowers[user] = followers
    oldFollowers.close()
-   
+
    ## Amigos
    # Tomamos los ids de los amigos
    friendsCursor = tweepy.Cursor(api.friends_ids,id=user)
    for id in friendsCursor.items():
       friendsIds.append(id)
-      
+
    # Información de cada amigo
    for friendsPage in paginacion(friendsIds, 100):
 	   friendsObjects = api.lookup_users(user_ids=friendsPage)
@@ -133,13 +135,10 @@ try:
 						inactivityDate = str(friend.created_at)
 				if inactivity != None and inactivity.days > inactivityTime:
 					inactivos.append([friend.name,friend.screen_name,inactivityDate])
-      
+
 except tweepy.error.TweepError, e:
-   if e.reason.find('Rate limit exceeded') != -1:
-      sys.exit('Error: Límite excedido')
-   else:
-      sys.exit('Error: '+str(e.reason))
-   
+   showSysError(e.reason)
+
 # Informacion del usuario
 print '###############################################'
 print 'Usuario: '+user

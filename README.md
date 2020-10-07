@@ -6,5 +6,6 @@ Este proyecto fue preparado para la X Sysmana del I.E.S Gran Capitán (Córdoba)
 * Nieves Borrero Barea [Github](https://github.com/NievesBorrero)
 * Pablo León Alcaide [Github](https://github.com/pabloleonalcaide)
 
+[Licencia](LICENSE)
 
 __El proyecto está sujeto a mejoras y ampliación de funcionalidades de los diferentes scripts__
